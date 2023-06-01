@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>LetsTalk</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="icons/logo.svg" width="35px" />
+                <h1>LetsTalk</h1>
+            </div>
+            <button><h1>&gt;</h1></button>
+        </header>
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4 class="users-count"></h4>
+                </div>
+                <div class="users-list">
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                </div>
+                <div class="user-input">
+                    <input id="user_msg" type="text" placeholder="Message">
+                    <button type="button" id="user_send">SEND</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var uwindow = document.querySelector('.users-window');
+        function show_hide(){
+            if(uwindow.style.display == "block"){
+                uwindow.style.display="none";
+            }else{
+                uwindow.style.display="block";
+            }
+        }
+    </script>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+</html>
